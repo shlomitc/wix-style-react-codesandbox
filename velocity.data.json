@@ -1,0 +1,11 @@
+{
+  "title": "Wix Stack React Example Application",
+  "debug": true,
+  "experiments": {},
+  "locale": "en",
+  "basename": "/",
+  "clientTopology": {
+    "staticsDomain": "static.parastorage.com",
+    "staticsBaseUrl": "./cdn/"
+  }
+}

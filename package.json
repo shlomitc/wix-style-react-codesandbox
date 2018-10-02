@@ -1,0 +1,56 @@
+{
+  "name": "yoshi-client",
+  "version": "1.0.0",
+  "description": "a yoshi client project",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm rebuild node-sass",
+    "start": "yoshi start",
+    "precommit": "lint-staged",
+    "pretest": "yoshi build",
+    "test": "yoshi test",
+    "posttest": "yoshi lint",
+    "release": "yoshi release"
+  },
+  "devDependencies": {
+    "enzyme": "~2.9.0",
+    "express": "~4.15.0",
+    "express-session": "~1.15.0",
+    "http-proxy-middleware": "latest",
+    "husky": "~0.14.0",
+    "lint-staged": "^7.2.2",
+    "jest-yoshi-preset": "^3.5.0",
+    "puppeteer": "^1.1.0",
+    "react-test-renderer": "~15.6.0",
+    "velocity": "~0.7.0",
+    "yoshi": "^3.0.0",
+    "yoshi-style-dependencies": "^3.0.0"
+  },
+  "dependencies": {
+    "prop-types": "~15.6.0",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "wix-style-react": "latest"
+  },
+  "lint-staged": {
+    "*.{js,scss,less}": "yoshi lint"
+  },
+  "yoshi": {
+    "externals": {
+      "react": "React",
+      "react-dom": "ReactDOM"
+    },
+    "hmr": "auto"
+  },
+  "jest": {
+    "preset": "jest-yoshi-preset"
+  },
+  "babel": {
+    "presets": [
+      "yoshi"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "yoshi"
+  }
+}
